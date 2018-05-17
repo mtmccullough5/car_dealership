@@ -17,10 +17,41 @@
   "Service a Car"
 ]
 
-def menu
+def show_inventory
+  menu("one day I will work")
+end
+
+def add_car
+  menu("one day I will work")
+end
+
+def service_car
+  menu("one day I will work")
+end
+
+def menu(message)
+  puts `clear`
+  puts message
   @menu_options.each_with_index do |item, index|
     puts "#{index+1}: #{item}"
   end
+  puts "Please select what you want to do"
+  choice = gets.to_i
+  menu_choice(choice)
 end
 
-menu
+def menu_choice(choice)
+  case
+  when 1
+    show_inventory
+  when 2
+    add_car
+  when 3
+    service_car
+  else
+    puts "unfortunately that is an invalid option"
+    menu
+  end
+end
+
+menu("Welcome to MTM's Car Dealership!")
