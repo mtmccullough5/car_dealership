@@ -53,5 +53,5 @@ def menu_choice(choice)
     menu
   end
 end
-
+# Just an a quick note
 menu("Welcome to MTM's Car Dealership!")
